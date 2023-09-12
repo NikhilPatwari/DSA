@@ -2,7 +2,7 @@ package Sorting;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int arr[] = { 9, 4, 7, 6, 3, 1, 5 };
+        int[] arr = { 9, 4, 7, 6, 3, 1, 5 };
         mergeSort(arr,0,arr.length-1);
         for(int a:arr){
             System.out.print(a + " ,");
@@ -33,18 +33,15 @@ public class MergeSort {
             }
             k++;
         }
-        if (i > mid) {
-            while (j <= r) {
-                temp[k] = arr[j];
-                j++;
-                k++;
-            }
-        } else {
-            while (i <= mid) {
-                temp[k] = arr[i];
-                i++;
-                k++;
-            }
+        while(i<= mid){
+            temp[k] = arr[i];
+            i++;
+            k++;
+        }
+        while(j<= r){
+            temp[k] = arr[j];
+            j++;
+            k++;
         }
         k =0;
         while(l<=r){
